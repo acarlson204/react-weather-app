@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+a {
+	color: rgb(17, 17, 17);
+	text-decoration: none;
+}
+body {
+	background: rgb(149, 137, 158);
+	line-height: 2;
+	margin: 0 auto;
+	text-rendering: optimizeLegibility;
+  max-width: 600px;
+  padding-top: 30px;
+}
+footer {
+	color: #fff;
+	font-size: 0.7rem;
+	padding: 20px;
+	text-align: center;
+}
+.city {
+	font-family: cursive;
+}
+.current-weather-background {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2dfed+0,c8d7eb+26,bed0ea+51,a6c0e3+51,afc7e8+62,bad0ef+75,99b5db+88,799bc8+100;Grey+Blue+Gloss+%231 */
+	background: #d2dfed; /* Old browsers */
+	background: -moz-linear-gradient(
+		top,
+		#d2dfed 0%,
+		#c8d7eb 26%,
+		#bed0ea 51%,
+		#a6c0e3 51%,
+		#afc7e8 62%,
+		#bad0ef 75%,
+		#99b5db 88%,
+		#799bc8 100%
+	); /* FF3.6-15 */
+	background: -webkit-linear-gradient(
+		top,
+		#d2dfed 0%,
+		#c8d7eb 26%,
+		#bed0ea 51%,
+		#a6c0e3 51%,
+		#afc7e8 62%,
+		#bad0ef 75%,
+		#99b5db 88%,
+		#799bc8 100%
+	); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		to bottom,
+		#d2dfed 0%,
+		#c8d7eb 26%,
+		#bed0ea 51%,
+		#a6c0e3 51%,
+		#afc7e8 62%,
+		#bad0ef 75%,
+		#99b5db 88%,
+		#799bc8 100%
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2dfed', endColorstr='#799bc8',GradientType=0 ); /* IE6-9 */
+}
+.city {
+	font-family: "Ubuntu", sans-serif;
+}
+.container {
+	margin: 10px auto;
+}
+.description {
+	font-style: italic;
+	line-height: 3 !important;
+	text-transform: uppercase;
+}
+.description,
+.sunrise,
+.sunset,
+.humidity,
+.wind,
+.forecast-temperature,
+.date-time {
+	color: #5b3bad;
+}
+.forecast {
+	font-size: 18px;
+	text-align: center;
+}
+.forecast-temperature {
+	font-size: 14px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.icon {
+	left: -18px;
+	position: relative;
+	top: -28px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.last-updated-wrapper {
+	text-align: right;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.top-max-min-wrapper {
+	bottom: 20px;
+	left: 88px;
+	position: relative;
 }
-
-.App-link {
-  color: #61dafb;
+.sunrise-sunset-wrapper,
+.last-updated-wrapper {
+	font-weight: 400;
+	line-height: 2;
+	text-align: left;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.temperature {
+	font-size: 2.5rem;
+}
+.temp-max {
+	font-weight: 600;
+}
+.units {
+	font-size: 16px;
+	position: relative;
+	top: -20px;
+}
+.units .active {
+	color: rgb(17, 17, 17);
+	font-weight: 600;
+}
+.units :hover {
+	color: aqua;
+	cursor: pointer;
+}
+.weather {
+	align-content: center;
+	background: rgb(236, 235, 221);
+	border-radius: 16px;
+	box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+	color: rgb(17, 17, 17);
+	display: block;
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0 auto;
+	width: 685px;
+	padding: 35px;
 }
