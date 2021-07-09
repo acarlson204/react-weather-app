@@ -11,7 +11,7 @@ export default function Form() {
                         placeholder="Enter a city..."
                         aria-label=".form-control-sm example"
                     />
-                    <button type="submit" className="col-2 btn btn-primary">
+                    <button type="submit" className="col-3 btn btn-primary">
                         Search
                     </button>
                 </div>

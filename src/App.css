@@ -3,23 +3,126 @@ a {
 	text-decoration: none;
 }
 body {
-	background: rgb(149, 137, 158);
+	background: #4A154B;
+	color: #fff;
 	line-height: 2;
-	margin: 0 auto;
-	text-rendering: optimizeLegibility;
   max-width: 600px;
-  padding-top: 30px;
+  padding-top: 3px;
+  padding-left: 13px;
+}
+button:hover,
+a:hover {
+    transition:  all 500ms ease-in-out;
+}
+a {
+     font-size: 1rem;
+     line-height: 2;
+     text-decoration: none;
+     text-rendering: optimizeLegibility;
+	 color: #2DB67C;
+ }
+ button {
+     font-size: 1.2rem;
+	 background-color: #FFE168;
+	 border: 1px solid #2DB67C;
+	 border-radius: 3px;
+ }
+.sub-footer {
+	padding: 0px;
 }
 footer {
-	color: #fff;
-	font-size: 0.7rem;
-	padding: 20px;
+	font-size: 1rem;
 	text-align: center;
 }
 .city {
-	font-family: cursive;
+	padding-top: 10px;
 }
-.current-weather-background {
+
+.city {
+	font-family: "Ubuntu", sans-serif;
+}
+
+.description {
+	text-transform: uppercase;
+}
+form {
+	max-width: 100%;
+}
+.forecast {
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.forecast-temperature {
+	font-size: 14px;
+}
+.icon {
+	left:  20px;
+	top: 20px;
+	position: relative;
+
+}
+.last-updated-wrapper {
+	margin: 34px;
+
+}
+.search-input, .btn {
+	font-size: 1rem!important;
+	margin: 5px;
+}
+.top-max-min-wrapper {
+	bottom: 20px;
+	left: 88px;
+	position: relative;
+}
+.sunrise-sunset-wrapper,
+.last-updated-wrapper {
+	font-weight: 400;
+	line-height: 2;
+	text-align: left;
+}
+.temperature {
+	font-size: 3rem;
+
+}
+.temp-max {
+	font-weight: 600;
+}
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+.units {
+	font-size: 16px;
+	position: relative;
+	top: -28px;
+}
+.units .active {
+	color: #2DB67C;
+	font-weight: 600;
+}
+.units :hover {
+	color: #DF1E5A;
+	cursor: pointer;
+}
+.weather {
+	align-content: center;
+	background: rgb(236, 235, 221);
+	border-radius: 16px;
+	box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+	color: rgb(17, 17, 17);
+	display: block;
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0 auto;
+	width: 685px;
+	padding: 35px;
+}
+
+
+
+.current-weather-background, .left-col, button {
+	margin: 3px;
+	border-radius: 5px;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2dfed+0,c8d7eb+26,bed0ea+51,a6c0e3+51,afc7e8+62,bad0ef+75,99b5db+88,799bc8+100;Grey+Blue+Gloss+%231 */
 	background: #d2dfed; /* Old browsers */
 	background: -moz-linear-gradient(
@@ -56,82 +159,4 @@ footer {
 		#799bc8 100%
 	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2dfed', endColorstr='#799bc8',GradientType=0 ); /* IE6-9 */
-}
-.city {
-	font-family: "Ubuntu", sans-serif;
-}
-.container {
-	margin: 10px auto;
-}
-.description {
-	font-style: italic;
-	line-height: 3 !important;
-	text-transform: uppercase;
-}
-.description,
-.sunrise,
-.sunset,
-.humidity,
-.wind,
-.forecast-temperature,
-.date-time {
-	color: #5b3bad;
-}
-.forecast {
-	font-size: 18px;
-	text-align: center;
-}
-.forecast-temperature {
-	font-size: 14px;
-}
-
-.icon {
-	left: -18px;
-	position: relative;
-	top: -28px;
-}
-.last-updated-wrapper {
-	text-align: right;
-}
-.top-max-min-wrapper {
-	bottom: 20px;
-	left: 88px;
-	position: relative;
-}
-.sunrise-sunset-wrapper,
-.last-updated-wrapper {
-	font-weight: 400;
-	line-height: 2;
-	text-align: left;
-}
-.temperature {
-	font-size: 2.5rem;
-}
-.temp-max {
-	font-weight: 600;
-}
-.units {
-	font-size: 16px;
-	position: relative;
-	top: -20px;
-}
-.units .active {
-	color: rgb(17, 17, 17);
-	font-weight: 600;
-}
-.units :hover {
-	color: aqua;
-	cursor: pointer;
-}
-.weather {
-	align-content: center;
-	background: rgb(236, 235, 221);
-	border-radius: 16px;
-	box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
-	color: rgb(17, 17, 17);
-	display: block;
-	font-family: Helvetica, Arial, sans-serif;
-	margin: 0 auto;
-	width: 685px;
-	padding: 35px;
 }

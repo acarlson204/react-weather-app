@@ -6,9 +6,9 @@ export default function Forecast() {
         imgAlt: "sun"
     };
     return (
-        <div className="Container">
+        <div className="container">
             <hr />
-            <div className="Forecast">
+            <div className="forecast">
                 <div className="row">
                     <div className="col weekdays">
                         Thursday
@@ -37,7 +37,7 @@ export default function Forecast() {
                         <br />
                         💧7%
                     </div>
-                    <div className="col weekdays">
+                    <div className="col weekdays d-none d-sm-block">
                         Sunday
                         <div className="upcoming-icon">
                             <img src={weatherData.imgUrl} alt={weatherData.imgAlt} />
@@ -46,7 +46,7 @@ export default function Forecast() {
                         <br />
                         💧5%
                     </div>
-                    <div className="col weekdays">
+                    <div className="col weekdays d-none d-sm-block">
                         Monday
                         <div className="upcoming-icon">
                             <img src={weatherData.imgUrl} alt={weatherData.imgAlt} />

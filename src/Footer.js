@@ -6,17 +6,42 @@ export default function Footer() {
         imgGithub: "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
     };
     return (
-        <footer>
-            <div>
-                This project was coded by Abby Carlson. <br />
-                It is open sourced on GitHub and hosted on Netlify. <br />
-                <a href="https://app.netlify.com/teams/acarlson204/overview">
-                    <img src={img.imgGithub} alt="Github" />
-                </a>
-                <a href="https://github.com/acarlson204/vanilla-weather-app">
-                    <img src={img.imgNetlify} alt="Netlify" />
-                </a>
+
+        <div className="sub-footer">
+            <hr />
+            <div class="row text-center ">
+                <div class="col-sm-6">
+                    <h3>Let's work together
+                    </h3>
+
+                </div>
+                <div class="col-sm-6">
+                    <a href="mailto:ABBYCARLSON204@GMAIL.COM">ABBYCARLSON204@GMAIL.COM</a>
+                    <br />
+
+                    <a href="https://www.linkedin.com/in/acarlson204" target="_blank">ON
+                        LINKED IN  </a>
+
+                    <a href=" https://github.com/acarlson204" target="_blank">ON GITHUB</a>
+
+                </div>
+
+                <div className="row">
+                    <div className="col-6">
+                        <button class="mt-3 mb-3" href="contactme.html">Get in touch</button>
+                    </div><div className="col-6">
+                        <button class="mt-3 mb-3" href="contactme.html">My Portfolio</button>
+                    </div>
+                </div>
+
+
+                <hr />
             </div>
-        </footer>
+            <footer>
+                <div class="text-center mt-3 mb-4">
+                    2021 Abby Carlson. All rights reserved.
+                </div>
+            </footer>
+        </div>
     );
 }
