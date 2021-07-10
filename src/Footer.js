@@ -1,10 +1,7 @@
 import React from "react";
 
 export default function Footer() {
-    let img = {
-        imgNetlify: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-        imgGithub: "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-    };
+
     return (
 
         <div className="sub-footer">
@@ -19,10 +16,10 @@ export default function Footer() {
                     <a href="mailto:ABBYCARLSON204@GMAIL.COM">ABBYCARLSON204@GMAIL.COM</a>
                     <br />
 
-                    <a href="https://www.linkedin.com/in/acarlson204" target="_blank">ON
+                    <a href="https://www.linkedin.com/in/acarlson204" target="_blank" rel="noreferrer">ON
                         LINKED IN  </a>
 
-                    <a href=" https://github.com/acarlson204" target="_blank">ON GITHUB</a>
+                    <a href=" https://github.com/acarlson204" target="_blank" rel="noreferrer">ON GITHUB</a>
 
                 </div>
 

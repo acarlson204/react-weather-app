@@ -8,8 +8,8 @@ export default function Banner() {
         feelslike: "12",
         humidity: "99",
         wind: "25",
-        imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-        imgAlt: "sun"
+        Url: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+        Alt: "sun"
     };
     return (
         <div className="Banner">
