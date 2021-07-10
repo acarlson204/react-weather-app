@@ -10,6 +10,7 @@ export default function Forecast() {
             <hr />
             <div className="forecast">
                 <div className="row">
+
                     <div className="col weekdays">
                         Thursday
                         <div className="upcoming-icon">
@@ -19,6 +20,7 @@ export default function Forecast() {
                         <br />
                         💧5%
                     </div>
+
                     <div className="col weekdays">
                         Friday
                         <div className="upcoming-icon">
@@ -28,6 +30,7 @@ export default function Forecast() {
                         <br />
                         💧8%
                     </div>
+
                     <div className="col weekdays">
                         Saturday
                         <div className="upcoming-icon">
@@ -37,6 +40,7 @@ export default function Forecast() {
                         <br />
                         💧7%
                     </div>
+
                     <div className="col weekdays d-none d-sm-block">
                         Sunday
                         <div className="upcoming-icon">
@@ -46,6 +50,7 @@ export default function Forecast() {
                         <br />
                         💧5%
                     </div>
+
                     <div className="col weekdays d-none d-sm-block">
                         Monday
                         <div className="upcoming-icon">

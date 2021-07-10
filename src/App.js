@@ -1,15 +1,14 @@
 import './App.css';
+import Banner from "./Banner";
+import Footer from "./Footer";
+import Forecast from "./Forecast";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          Hello from App
-        </h1>
-      </header>
+      <Banner />
+      <Forecast />
+      <Footer />
     </div>
   );
 }
-
-export default App;

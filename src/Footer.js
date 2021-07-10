@@ -6,13 +6,13 @@ export default function Footer() {
 
         <div className="sub-footer">
             <hr />
-            <div class="row text-center ">
-                <div class="col-sm-6">
+            <div className="row text-center ">
+                <div className="col-sm-6">
                     <h3>Let's work together
                     </h3>
 
                 </div>
-                <div class="col-sm-6">
+                <div className="col-sm-6">
                     <a href="mailto:ABBYCARLSON204@GMAIL.COM">ABBYCARLSON204@GMAIL.COM</a>
                     <br />
 
@@ -25,9 +25,9 @@ export default function Footer() {
 
                 <div className="row">
                     <div className="col-6">
-                        <button class="mt-3 mb-3" href="contactme.html">Get in touch</button>
+                        <button className="mt-3 mb-3" href="contactme.html">Get in touch</button>
                     </div><div className="col-6">
-                        <button class="mt-3 mb-3" href="contactme.html">My Portfolio</button>
+                        <button className="mt-3 mb-3" href="contactme.html">My Portfolio</button>
                     </div>
                 </div>
 
@@ -35,7 +35,7 @@ export default function Footer() {
                 <hr />
             </div>
             <footer>
-                <div class="text-center mt-3 mb-4">
+                <div className="text-center mt-3 mb-4">
                     2021 Abby Carlson. All rights reserved.
                 </div>
             </footer>

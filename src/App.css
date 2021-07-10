@@ -1,5 +1,5 @@
 a {
-	color: #000;
+	color: #2DB67C;
 	text-decoration: none;
 }
 body {
@@ -36,7 +36,6 @@ footer {
 	max-width: fit-content;
 }
 .current-temp-max-min-wrapper {
-
 	font-size: 1.2em;
 }
 .description {
@@ -56,33 +55,24 @@ footer {
 }
 .last-updated-wrapper {
 	margin: 34px;
+	line-height: 2;
+	text-align: left;
+}
+.loading {
+	padding: 50px;
 }
 .search-input, .btn {
 	margin: 5px;
 }
-.last-updated-wrapper {
-	font-weight: 400;
-	line-height: 2;
-	text-align: left;
-}
 .temperature {
 	font-size: 3rem;
-}
-.temp-max {
-	font-weight: 600;
 }
 ul {
 	list-style: none;
 	padding-left: 0;
 }
-
 .units .active {
-	color: #4A154B;
 	font-weight: 600;
-}
-.units :hover {
-	color: #DF1E5A;
-	cursor: pointer;
 }
 .weather {
 	align-content: center;
@@ -97,48 +87,10 @@ ul {
 	width: 685px;
 	padding: 35px;
 }
-
-.current-weather-background {
-	max-width: 165px;
-}
-
-.current-weather-background, .left-col, button {
+.right-col, .left-col, button {
 	margin: 3px;
 	border-radius: 5px;
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2dfed+0,c8d7eb+26,bed0ea+51,a6c0e3+51,afc7e8+62,bad0ef+75,99b5db+88,799bc8+100;Grey+Blue+Gloss+%231 */
-	background: #d2dfed; /* Old browsers */
-	background: -moz-linear-gradient(
-		top,
-		#d2dfed 0%,
-		#c8d7eb 26%,
-		#bed0ea 51%,
-		#a6c0e3 51%,
-		#afc7e8 62%,
-		#bad0ef 75%,
-		#99b5db 88%,
-		#799bc8 100%
-	); /* FF3.6-15 */
-	background: -webkit-linear-gradient(
-		top,
-		#d2dfed 0%,
-		#c8d7eb 26%,
-		#bed0ea 51%,
-		#a6c0e3 51%,
-		#afc7e8 62%,
-		#bad0ef 75%,
-		#99b5db 88%,
-		#799bc8 100%
-	); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(
-		to bottom,
-		#d2dfed 0%,
-		#c8d7eb 26%,
-		#bed0ea 51%,
-		#a6c0e3 51%,
-		#afc7e8 62%,
-		#bad0ef 75%,
-		#99b5db 88%,
-		#799bc8 100%
-	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2dfed', endColorstr='#799bc8',GradientType=0 ); /* IE6-9 */
+}
+.right-col {
+	max-width: 165px;
 }
