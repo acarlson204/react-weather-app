@@ -1,11 +1,11 @@
 a {
-	color: rgb(17, 17, 17);
+	color: #000;
 	text-decoration: none;
 }
 body {
 	background: #4A154B;
 	font-family: 'Noto Sans JP', sans-serif;
-	color:darkgoldenrod;
+	color: #000;
   max-width: 600px;
   padding-top: 3px;
   padding-left: 13px;
@@ -23,9 +23,9 @@ a {
  }
  button {
      font-size: 1.2rem;
-	 background-color: #FFE168;
 	 border: 1px solid silver;
 	 border-radius: 3px;
+	 color: #000!important;
  }
 footer {
 	font-size: 1rem;
@@ -58,7 +58,6 @@ footer {
 	margin: 34px;
 }
 .search-input, .btn {
-	font-size: 1rem!important;
 	margin: 5px;
 }
 .last-updated-wrapper {
