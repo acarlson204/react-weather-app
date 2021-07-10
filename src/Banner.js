@@ -3,7 +3,7 @@ import "./App";
 import axios from "axios";
 export default function Banner(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
-    const [city, setCity] = useState(props.defaultCity)
+    const [setCity] = useState(props.defaultCity)
     function handleResponse(response) {
         setWeatherData({
             ready: true,
@@ -31,36 +31,30 @@ export default function Banner(props) {
         return (
             <div className="container">
                 <div className="row">
+
                     <form onSubmit={handleSubmit}>
-                        <input
-                            type="search"
-                            className="col form-control search-input"
-                            placeholder="Enter a city..."
-                            aria-label=".form-control-sm example"
-                            autoFocus="on"
-                        />
-                        <button onChange={handleCityChange} type="submit" value="submit" className="col-3 btn btn-primary">
-                            Search
-                        </button>
+                        <div className="col-8">
+                            <input
+                                type="search"
+                                className="col form-control search-input"
+                                placeholder="Enter a city..."
+                                aria-label=".form-control-sm example"
+                                autoFocus="on"
+                            />
+                        </div>
+                        <div className="col-3">
+                            <button onChange={handleCityChange} type="submit" value="submit" className="col-3 btn btn-primary">
+                                Search
+                            </button>
+                        </div>
                     </form>
                 </div>
-
-                <div className="row">
-                    <div className="Banner">
-                        <div className="col-7 left-col">
-                            <h1 className="city">{weatherData.date}</h1>
-                            <span className="description">{weatherData.description}</span>
-                            <br />FEELS LIKE:
-                            <span className="feelslike">{weatherData.feelslike}</span> ℃
-                            <div className="weather-conditions">
-                                HUMIDITY:
-                                <span className="humidity">{weatherData.humidity}</span> % <br />
-                                WIND:
-                                <span className="wind">{weatherData.wind}</span> km/h
-                            </div>
-                        </div>
-
-                        <div className="col right-col">
+                <div className="Banner">
+                    <div className="row">
+                        <h1 className="city">Winnipeg</h1>
+                    </div>
+                    <div className="row">
+                        <div className="col-5 left-col">
                             <img className="icon" src={weatherData.icon} alt="" />
                             <span className="temperature">{weatherData.temperature}</span>
                             <span className="units">
@@ -72,6 +66,21 @@ export default function Banner(props) {
                                 <span className="temp-min">00</span>℃
                             </div>
                         </div>
+
+                        <div className="col-7 right-col">
+
+                            <span className="description">{weatherData.description}</span>
+                            <br />FEELS LIKE:
+                            <span className="feelslike">{weatherData.feelslike}</span> ℃
+                            <div className="weather-conditions">
+                                HUMIDITY:
+                                <span className="humidity">{weatherData.humidity}</span> % <br />
+                                WIND:
+                                <span className="wind">{weatherData.wind}</span> km/h
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </div >
