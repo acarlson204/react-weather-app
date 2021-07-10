@@ -16,14 +16,14 @@ export default function Banner() {
             <div className="container">
                 <div className="row">
                     <div className="col-7 left-col">
-                        <h1 className="city"><strong>{weatherData.city}</strong></h1>
-                        <span className="description"><strong>{weatherData.description}</strong></span>
-                        <br /><strong>FEELS LIKE:</strong>
+                        <h1 className="city">{weatherData.city}</h1>
+                        <span className="description">{weatherData.description}</span>
+                        <br />FEELS LIKE:
                         <span className="feelslike">{weatherData.feelslike}</span> ℃
                         <div className="weather-conditions">
-                            <strong>HUMIDITY: </strong>
+                            HUMIDITY:
                             <span className="humidity">{weatherData.humidity}</span> % <br />
-                            <strong>WIND: </strong>
+                            WIND:
                             <span className="wind">{weatherData.wind}</span> km/h
                         </div>
                     </div>
@@ -41,6 +41,6 @@ export default function Banner() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
