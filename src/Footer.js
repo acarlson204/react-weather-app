@@ -7,24 +7,22 @@ export default function Footer() {
         <div className="sub-footer">
             <hr />
             <div className="row text-center ">
-                <div className="col-sm-6">
-                    <h3>Let's work together
-                    </h3>
 
-                </div>
-                <div className="col-sm-6">
-                    <a href="mailto:ABBYCARLSON204@GMAIL.COM">ABBYCARLSON204@GMAIL.COM</a>
-                    <br />
+                <h3>Let's work together
+                </h3>
 
-                    <a href="https://www.linkedin.com/in/acarlson204" target="_blank" rel="noreferrer">ON
-                        LINKED IN  </a>
 
-                    <a href=" https://github.com/acarlson204" target="_blank" rel="noreferrer">ON GITHUB</a>
+                <a href="mailto:ABBYCARLSON204@GMAIL.COM">ABBYCARLSON204@GMAIL.COM</a>
+                <br />
 
-                </div>
+                <a href="https://www.linkedin.com/in/acarlson204" target="_blank" rel="noreferrer">ON
+                    LINKED IN  </a>
+
+                <a href=" https://github.com/acarlson204" target="_blank" rel="noreferrer">ON GITHUB</a>
+
 
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col">
                         <button className="mt-3 mb-3" href="contactme.html">Get in touch</button>
                     </div><div className="col-6">
                         <button className="mt-3 mb-3" href="contactme.html">My Portfolio</button>

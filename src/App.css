@@ -6,19 +6,14 @@ body {
 	background: #4A154B;
 	font-family: 'Noto Sans JP', sans-serif;
 	color: #2DB67C;
-  max-width: 600px;
+  max-width: 500px;
   padding-top: 3px;
   padding-left: 13px;
-}
-button:hover,
-a:hover {
-    transition:  all 500ms ease-in-out;
 }
 a {
      font-size: 1rem;
      line-height: 2;
      text-decoration: none;
-     text-rendering: optimizeLegibility;
 	 color: #2DB67C;
  }
  button {
@@ -32,14 +27,13 @@ footer {
 	text-align: center;
 }
 .city {
+	font-size: 2.9rem;
 	padding-top: 14px;
 	max-width: fit-content;
 }
-.current-temp-max-min-wrapper {
-	font-size: 1.2em;
-}
 .description {
 	text-transform: uppercase;
+	text-align: left;
 }
 .forecast {
 	font-size: 18px;
@@ -53,44 +47,24 @@ footer {
 	position: relative;
 	left: 40px;
 }
-.last-updated-wrapper {
-	margin: 34px;
-	line-height: 2;
-	text-align: left;
-}
 .loading {
 	padding: 50px;
 }
-.search-input, .btn {
-	margin: 5px;
-}
 .temperature {
-	font-size: 3rem;
+	font-size: 3.2rem;
 }
 ul {
 	list-style: none;
 	padding-left: 0;
 }
-.units .active {
-	font-weight: 600;
+.units {
+	position: relative;
+	bottom: 25px;
+	font-size: .8rem;
 }
-.weather {
-	align-content: center;
-	background: rgb(236, 235, 221);
-	border: 1px solid silver;
-	border-radius: 16px;
-	box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
-	color: rgb(17, 17, 17);
-	display: block;
-	font-family: Helvetica, Arial, sans-serif;
-	margin: 0 auto;
-	width: 685px;
-	padding: 35px;
-}
-.right-col, .left-col, button {
-	margin: 3px;
-	border-radius: 5px;
+.right-col, .left-col {
+	padding: 5px;
 }
 .right-col {
-	max-width: 165px;
+	font-size: 1.1rem;
 }
