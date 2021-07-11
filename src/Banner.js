@@ -28,11 +28,26 @@ export default function Banner(props) {
         axios.get(url).then(handleResponse);
     }
 
+    function Unit() {
+        const [units, setUnits] = useState("celcius")
+        function convertToFahrenheit() {
+            event.preventDefault();
+            setUnits("fahrenheit")
+        }
+        if (unit === "celcius") {
+            return (
+                <span className="units">
+                    <span className="celsius-link active">℃</span>|<span className=" fahrenheit-link"></span><a href="#" onClick={convertToFahrenheit}>℉</a>
+                </span>
+            );
+        } else {
+            return (<p>F</p>);
+        }
+    }
 
     if (weatherData.ready) {
         return (
             <div className="container">
-
                 <form onSubmit={handleSubmit}>
                     <div class="input-group">
                         <input type="text" onChange={handleCityChange} className="form-control search-input" placeholder="Search" autoFocus="on" aria-label="Search" />
@@ -43,30 +58,29 @@ export default function Banner(props) {
                     <div className="row">
                         <div className="col-6">
                             <h1 className="city">{city}</h1> </div>
-                        <div className="col-3">
+                        <div className="col-5">
                             <img className="icon" src={weatherData.icon} alt="" />
                         </div>
                     </div>
+                    <div className="banner-main">
+                        <div className="row">
+                            <div className="col-6 left-col">
+                                <span className="temperature">{weatherData.temperature}</span>
 
-                    <div className="row">
-                        <div className="col-6 left-col">
-                            <span className="temperature">{weatherData.temperature}</span>
-                            <span className="units">
-                                <span className="celsius-link active">℃</span>| ℉
-                            </span>
 
-                            <div className="description">{weatherData.description}</div>
-                        </div>
+                                <div className="description">{weatherData.description}</div>
+                            </div>
 
-                        <div className="col-6 right-col">
+                            <div className="col-6 right-col">
 
-                            <br />FEELS LIKE:
-                            <span className="feelslike">{weatherData.feelslike}</span>℃
-                            <div className="weather-conditions">
-                                HUMIDITY:
-                                <span className="humidity">{weatherData.humidity}</span>% <br />
-                                WIND:
-                                <span className="wind">{weatherData.wind}</span>km/h
+                                <br />FEELS LIKE:
+                                <span className="feelslike">{weatherData.feelslike}</span>℃
+                                <div className="weather-conditions">
+                                    HUMIDITY:
+                                    <span className="humidity">{weatherData.humidity}</span>% <br />
+                                    WIND:
+                                    <span className="wind">{weatherData.wind}</span>km/h
+                                </div>
                             </div>
                         </div>
                     </div>
