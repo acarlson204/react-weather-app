@@ -13,7 +13,7 @@ export default function Banner(props) {
             feelslike: Math.round(response.data.main.feels_like),
             humidity: response.data.main.humidity,
             wind: Math.round(response.data.wind.speed),
-            icon: response.data.weather[0].icon,
+            icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
         })
     }
     function handleSubmit(event) {
@@ -41,8 +41,11 @@ export default function Banner(props) {
                 </form>
                 <div className="Banner">
                     <div className="row">
-                        <h1 className="city">{city}</h1>
-                        <img className="icon" src={weatherData.icon} alt="" />
+                        <div className="col-6">
+                            <h1 className="city">{city}</h1> </div>
+                        <div className="col-3">
+                            <img className="icon" src={weatherData.icon} alt="" />
+                        </div>
                     </div>
 
                     <div className="row">

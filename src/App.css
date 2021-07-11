@@ -43,9 +43,8 @@ footer {
 .forecast-temperature {
 	font-size: 14px;
 }
-.icon {
-	position: relative;
-	left: 40px;
+icon {
+justify-content: right;
 }
 .loading {
 	padding: 50px;
