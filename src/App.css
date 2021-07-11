@@ -29,7 +29,7 @@ footer {
 	text-align: center;
 }
 .city {
-	font-size: 2.9rem;
+	font-size: 2.5rem;
 	padding-top: 14px;
 	max-width: fit-content;
 }
@@ -69,8 +69,7 @@ ul {
 }
 .right-col, .left-col {
 	padding: 5px;
-	border: 1px solid silver;
-	border-radius: 2px;
+
 }
 .right-col {
 	font-size: 1.1rem;

@@ -31,10 +31,10 @@ export default function Banner(props) {
     function Unit() {
         const [units, setUnits] = useState("celcius")
         function convertToFahrenheit() {
-            event.preventDefault();
+
             setUnits("fahrenheit")
         }
-        if (unit === "celcius") {
+        if (units === "celcius") {
             return (
                 <span className="units">
                     <span className="celsius-link active">℃</span>|<span className=" fahrenheit-link"></span><a href="#" onClick={convertToFahrenheit}>℉</a>
@@ -56,11 +56,13 @@ export default function Banner(props) {
                 </form>
                 <div className="Banner">
                     <div className="row">
-                        <div className="col-6">
-                            <h1 className="city">{city}</h1> </div>
-                        <div className="col-5">
+                        <div className="col-3">
                             <img className="icon" src={weatherData.icon} alt="" />
                         </div>
+                        <span className="col-6">
+                            <h1 className="city">{city}</h1> </span>
+
+
                     </div>
                     <div className="banner-main">
                         <div className="row">
