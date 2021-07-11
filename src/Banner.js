@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./App";
 import axios from "axios";
+
 export default function Banner(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
-    const [setCity] = useState(props.defaultCity)
+    const [city, setCity] = useState(props.defaultCity)
     function handleResponse(response) {
         setWeatherData({
             ready: true,
@@ -20,10 +21,10 @@ export default function Banner(props) {
         search();
     }
     function handleCityChange(event) {
-        setCity("event.target.value")
+        setCity(event.target.value);
     }
     function search() {
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=winnipeg&appid=03ea91762285df0d5fb999b760075dea&units=metric`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=03ea91762285df0d5fb999b760075dea&units=metric`;
         axios.get(url).then(handleResponse);
     }
 
@@ -34,17 +35,18 @@ export default function Banner(props) {
 
                 <form onSubmit={handleSubmit}>
                     <div class="input-group">
-                        <input type="text" className="form-control search-input" placeholder="Search" autoFocus="on" aria-label="Search" />
-                        <button onChange={handleCityChange} type="submit" value="submit">Search</button>
+                        <input type="text" onChange={handleCityChange} className="form-control search-input" placeholder="Search" autoFocus="on" aria-label="Search" />
+                        <button type="submit" value="submit">Search</button>
                     </div>
                 </form>
                 <div className="Banner">
                     <div className="row">
-                        <h1 className="city">Winnipeg</h1>
+                        <h1 className="city">{city}</h1>
+                        <img className="icon" src={weatherData.icon} alt="" />
                     </div>
+
                     <div className="row">
                         <div className="col-6 left-col">
-                            <img className="icon" src={weatherData.icon} alt="" />
                             <span className="temperature">{weatherData.temperature}</span>
                             <span className="units">
                                 <span className="celsius-link active">℃</span>| ℉
