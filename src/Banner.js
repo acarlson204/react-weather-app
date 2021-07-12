@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./App";
+import "./Banner.css";
+import Forecast from "./Forecast";
 import axios from "axios";
 import Units from "./Units";
 
@@ -9,6 +11,7 @@ export default function Banner(props) {
     function handleResponse(response) {
         setWeatherData({
             ready: true,
+            coordinates: response.data.coord,
             temperature: Math.round(response.data.main.temp),
             description: response.data.weather[0].description,
             feelslike: Math.round(response.data.main.feels_like),
@@ -50,7 +53,7 @@ export default function Banner(props) {
                         <div className="row">
                             <div className="col-6 left-col">
                                 <div className="temperature">{weatherData.temperature}</div>
-                                <Units celcius={props.data.temperature} />
+                                <Units celcius={props.temperature} />
                                 <div className="description">{weatherData.description}</div>
                             </div>
                             <div className="col-6 right-col">
@@ -65,6 +68,7 @@ export default function Banner(props) {
                             </div>
                         </div>
                     </div>
+                    <Forecast coordinates={weatherData.coordinates} />
                 </div>
             </div >
         )

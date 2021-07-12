@@ -1,7 +1,3 @@
-a {
-	color: #2DB67C;
-	text-decoration: none;
-}
 body {
 	background: #4A154B;
 	font-family: 'Noto Sans JP', sans-serif;
@@ -10,68 +6,17 @@ body {
   padding-top: 3px;
   padding-left: 13px;
 }
+
 a {
-     font-size: 1rem;
-     line-height: 2;
-     text-decoration: none;
-	 color: #2DB67C;
- }
- button {
-     font-size: 1.2rem;
-	 border: 1px solid silver;
-	 border-radius: 3px;
-	 color: #000!important;
-	 align-content: center;
-
- }
-footer {
-	font-size: 1rem;
-	text-align: center;
+    font-size: 1rem;
+    line-height: 2;
+    text-decoration: none;
+    color: #2DB67C;
 }
-.city {
-	font-size: 2.5rem;
-	padding-top: 14px;
-	max-width: fit-content;
-}
-.description {
-	text-transform: uppercase;
-	text-align: left;
-}
-.email {
-font-size: 1.2rem;
-
-}
-.forecast {
-	font-size: 18px;
-	text-align: center;
-	margin-bottom: 20px;
-}
-.forecast-temperature {
-	font-size: 14px;
-}
-icon {
-justify-content: right;
-}
-.loading {
-	padding: 50px;
-}
-.temperature {
-	font-size: 3.2rem;
-}
-ul {
-	list-style: none;
-	padding-left: 0;
-}
-.units {
-	position: relative;
-	bottom: 25px;
-	font-size: .8rem;
-}
-.right-col, .left-col {
-	padding: 5px;
-
-}
-.right-col {
-	font-size: 1.1rem;
-
+button {
+    font-size: 1.2rem;
+    border: 1px solid silver;
+    border-radius: 3px;
+    color: #000!important;
+    align-content: center;
 }
