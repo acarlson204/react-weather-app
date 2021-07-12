@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App";
 import axios from "axios";
+import Units from "./Units";
 
 export default function Banner(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
@@ -28,23 +29,6 @@ export default function Banner(props) {
         axios.get(url).then(handleResponse);
     }
 
-    function Unit() {
-        const [units, setUnits] = useState("celcius")
-        function convertToFahrenheit() {
-
-            setUnits("fahrenheit")
-        }
-        if (units === "celcius") {
-            return (
-                <span className="units">
-                    <span className="celsius-link active">℃</span>|<span className=" fahrenheit-link"></span><a href="#" onClick={convertToFahrenheit}>℉</a>
-                </span>
-            );
-        } else {
-            return (<p>F</p>);
-        }
-    }
-
     if (weatherData.ready) {
         return (
             <div className="container">
@@ -61,20 +45,15 @@ export default function Banner(props) {
                         </div>
                         <span className="col-6">
                             <h1 className="city">{city}</h1> </span>
-
-
                     </div>
                     <div className="banner-main">
                         <div className="row">
                             <div className="col-6 left-col">
-                                <span className="temperature">{weatherData.temperature}</span>
-
-
+                                <div className="temperature">{weatherData.temperature}</div>
+                                <Units celcius={props.data.temperature} />
                                 <div className="description">{weatherData.description}</div>
                             </div>
-
                             <div className="col-6 right-col">
-
                                 <br />FEELS LIKE:
                                 <span className="feelslike">{weatherData.feelslike}</span>℃
                                 <div className="weather-conditions">
