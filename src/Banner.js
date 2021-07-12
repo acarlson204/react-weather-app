@@ -5,7 +5,7 @@ import Units from "./Units";
 
 export default function Banner(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
-    const [city, setCity] = useState(props.defaultCity)
+    const [city, setCity] = useState(props.defaultCity);
     function handleResponse(response) {
         setWeatherData({
             ready: true,

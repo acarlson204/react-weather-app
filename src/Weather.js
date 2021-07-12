@@ -3,7 +3,6 @@ import Banner from "./Banner";
 import Footer from "./Footer";
 import Forecast from "./Forecast";
 import Form from "./Form";
-import LastUpdated from "./LastUpdated";
 
 export default function Weather() {
     return (
@@ -12,10 +11,9 @@ export default function Weather() {
             <div className="weather">
                 <Form />
                 <hr />
-                <Banner />
+                <Banner defaultCity="Winnipeg" />
                 <Forecast />
                 <hr />
-                <LastUpdated />
             </div>
             <Footer />
         </div>
