@@ -1,41 +1,40 @@
-import React from "react";
-
+import React, { useState } from "react";
 import "./Forecast.css";
+import ForecastDay from "./ForecastDay";
 import "./App.css";
 import axios from "axios";
+
 export default function Forecast(props) {
-    let weatherData = {
-        imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-        imgAlt: "sun"
-    };
+    let [loaded, setLoaded] = useState(false);
+    let [forecastData, setForecastData] = useState(null);
+
+    // let imgUrl = "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
 
     function handleAPIResponse(response) {
-        console.log(response.data)
-
-        let latitude = props.coordinates.lon;
-        let longitude = props.coordinates.lat;
-        let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=03ea91762285df0d5fb999b760075dea&units=metric`
-        axios.get(apiUrl).then(handleAPIResponse);
+        setForecastData(response.data.daily)
+        setLoaded(true);
     }
 
-    return (
-        <div className="container">
-            <hr />
-            <div className="forecast">
-                <div className="row">
+    if (loaded) {
+        return (
+            <div className="container">
+                <hr />
+                <div className="forecast">
+                    <div className="row">
 
-                    <div className="col weekday">
-                        Thursday
-                        <div className="upcoming-icon">
-                            <img src={weatherData.imgUrl} alt={weatherData.imgAlt} />
-                        </div>
-                        12°/0°
-                        <br />
-                        💧5%
+                        <ForecastDay data={Forecast[0]} />
+
                     </div>
-
                 </div>
             </div>
-        </div>
-    );
+        );
+    } else {
+        let latitude = props.coordinates.lat;
+        let longitude = props.coordinates.lon;
+        let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=03ea91762285df0d5fb999b760075dea&units=metric`
+
+        axios.get(apiUrl).then(handleAPIResponse);
+
+        return null;
+    }
 }
