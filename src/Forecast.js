@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import "./Forecast.css";
 import ForecastDay from "./ForecastDay";
+import "./Forecast.css";
 import "./App.css";
 import axios from "axios";
 
 export default function Forecast(props) {
     let [loaded, setLoaded] = useState(false);
     let [forecastData, setForecastData] = useState(null);
-
-    // let imgUrl = "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
 
     function handleAPIResponse(response) {
         setForecastData(response.data.daily)
@@ -22,7 +20,7 @@ export default function Forecast(props) {
                 <div className="forecast">
                     <div className="row">
 
-                        <ForecastDay data={Forecast[0]} />
+                        <ForecastDay data={forecastData} />
 
                     </div>
                 </div>

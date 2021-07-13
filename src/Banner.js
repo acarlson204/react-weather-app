@@ -4,6 +4,7 @@ import "./Banner.css";
 import Forecast from "./Forecast";
 import axios from "axios";
 import Units from "./Units";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Banner(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
@@ -17,7 +18,7 @@ export default function Banner(props) {
             feelslike: Math.round(response.data.main.feels_like),
             humidity: response.data.main.humidity,
             wind: Math.round(response.data.wind.speed),
-            icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+            icon: response.data.weather[0].icon,
         })
     }
     function handleSubmit(event) {
@@ -36,7 +37,7 @@ export default function Banner(props) {
         return (
             <div className="container">
                 <form onSubmit={handleSubmit}>
-                    <div class="input-group">
+                    <div className="input-group">
                         <input type="text" onChange={handleCityChange} className="form-control search-input" placeholder="Search" autoFocus="on" aria-label="Search" />
                         <button type="submit" value="submit">Search</button>
                     </div>
@@ -44,7 +45,7 @@ export default function Banner(props) {
                 <div className="Banner">
                     <div className="row">
                         <div className="col-3">
-                            <img className="icon" src={weatherData.icon} alt="" />
+                            <WeatherIcon code={props.icon} />
                         </div>
                         <span className="col-6">
                             <h1 className="city">{city}</h1> </span>

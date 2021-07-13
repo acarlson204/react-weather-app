@@ -22,7 +22,7 @@ export default function Footer() {
                     <a href=" https://github.com/acarlson204" target="_blank" rel="noreferrer">ON GITHUB</a>
                 </div>
                 <div className="row justify-content-center">
-                    <a href="mailto:ABBYCARLSON204@GMAIL.COM" class="mt-3 email text-center">ABBYCARLSON204@GMAIL.COM</a>
+                    <a href="mailto:ABBYCARLSON204@GMAIL.COM" className="mt-3 email text-center">ABBYCARLSON204@GMAIL.COM</a>
                 </div>
             </div>
             <div className="text-center">
