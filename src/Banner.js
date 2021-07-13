@@ -53,8 +53,8 @@ export default function Banner(props) {
                     <div className="banner-main">
                         <div className="row">
                             <div className="col-6 left-col">
-                                <div className="temperature">{weatherData.temperature}</div>
-                                <Units celcius={props.temperature} />
+                                <div className="temperature">
+                                    <Units celcius={weatherData.temperature} /></div>
                                 <div className="description">{weatherData.description}</div>
                             </div>
                             <div className="col-6 right-col">

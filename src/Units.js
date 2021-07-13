@@ -3,8 +3,8 @@ import "./Unit.css";
 
 export default function Unit(props) {
     const [units, setUnits] = useState("celcius")
-    const fahrenheit = (props.temperature * 9) / 5 + 32;
-    const celcius = props.temperature
+    const fahrenheit = (props.celcius * 9) / 5 + 32;
+    const celcius = props.celcius
 
     function showFahrenheit(event) {
         event.preventDefault();
