@@ -6,17 +6,3 @@ body {
   padding-top: 3px;
   padding-left: 13px;
 }
-
-a {
-    font-size: 1rem;
-    line-height: 2;
-    text-decoration: none;
-    color: #2DB67C;
-}
-button {
-    font-size: 1.2rem;
-    border: 1px solid silver;
-    border-radius: 3px;
-    color: #000!important;
-    align-content: center;
-}

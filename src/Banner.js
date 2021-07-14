@@ -15,7 +15,6 @@ export default function Banner(props) {
             coordinates: response.data.coord,
             temperature: Math.round(response.data.main.temp),
             description: response.data.weather[0].description,
-            feelslike: Math.round(response.data.main.feels_like),
             humidity: response.data.main.humidity,
             wind: Math.round(response.data.wind.speed),
             icon: response.data.weather[0].icon,
@@ -36,7 +35,7 @@ export default function Banner(props) {
     if (weatherData.ready) {
         return (
             <div className="container">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} >
                     <div className="input-group">
                         <input type="text" onChange={handleCityChange} className="form-control search-input" placeholder="Search" autoFocus="on" aria-label="Search" />
                         <button type="submit" value="submit">Search</button>
@@ -58,13 +57,16 @@ export default function Banner(props) {
                                 <div className="description">{weatherData.description}</div>
                             </div>
                             <div className="col-6 right-col">
-                                <br />FEELS LIKE:
-                                <span className="feelslike">{weatherData.feelslike}</span>℃
+                                <br />
                                 <div className="weather-conditions">
                                     HUMIDITY:
-                                    <span className="humidity">{weatherData.humidity}</span>% <br />
+                                    <span className="humidity">{weatherData.humidity}</span>%
+                                    <br />
                                     WIND:
                                     <span className="wind">{weatherData.wind}</span>km/h
+                                    <br />
+                                    RAIN:
+                                    <span className="rain">{weatherData.rain}</span>%
                                 </div>
                             </div>
                         </div>

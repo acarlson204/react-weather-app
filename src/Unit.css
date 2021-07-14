@@ -1,7 +1,10 @@
 .unit {
-color: #2DB67C;
 	position: relative;
 	bottom: 30px;
     left: 15px;
 	font-size: .8rem;
+    border: 1px solid silver;
+    border-radius: 3px;
+    color: #000!important;
+    align-content: center;
 }
