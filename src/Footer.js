@@ -8,11 +8,8 @@ export default function Footer() {
                 <hr />
                 <div className="row text-center ">
                     <h3>
-                        <span className="together">Let's work <strong>together</strong></span>
+                        <span className="together"><a href="mailto:ABBYCARLSON204@GMAIL.COM">Let's work together</a></span>
                     </h3>
-                </div>
-                <div className="row">
-                    <a href="mailto:ABBYCARLSON204@GMAIL.COM" className="mt-3 email text-center">ABBYCARLSON204@GMAIL.COM</a>
                 </div>
             </div>
             <hr />

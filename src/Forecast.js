@@ -16,10 +16,25 @@ export default function Forecast(props) {
     if (loaded) {
         return (
             <div className="container">
-                <hr />
+
                 <div className="forecast">
                     <div className="row">
-                        <ForecastDay data={forecastData[0]} />
+                        <div className="col">
+                            <ForecastDay data={forecastData[0]} />
+                        </div>
+                        <div className="col">
+                            <ForecastDay data={forecastData[1]} />
+                        </div>
+                        <div className="col">
+                            <ForecastDay data={forecastData[2]} />
+                        </div>
+                        <div className="col">
+                            <ForecastDay data={forecastData[3]} />
+                        </div>
+                        <div className="col">
+                            <ForecastDay data={forecastData[4]} />
+                        </div>
+
                     </div>
                 </div>
             </div>

@@ -4,11 +4,13 @@ import "./Banner.css";
 import Forecast from "./Forecast";
 import axios from "axios";
 import Units from "./Units";
-import WeatherIcon from "./WeatherIcon";
+
 
 export default function Banner(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
     const [city, setCity] = useState(props.defaultCity);
+
+
     function handleResponse(response) {
         setWeatherData({
             ready: true,
@@ -17,9 +19,11 @@ export default function Banner(props) {
             description: response.data.weather[0].description,
             humidity: response.data.main.humidity,
             wind: Math.round(response.data.wind.speed),
-            icon: response.data.weather[0].icon,
+            max: Math.round(response.data.main.temp_max),
+            min: Math.round(response.data.main.temp_min)
         })
     }
+
     function handleSubmit(event) {
         event.preventDefault();
         search();
@@ -44,7 +48,9 @@ export default function Banner(props) {
                 <div className="Banner">
                     <div className="row">
                         <div className="col-3">
-                            <WeatherIcon code={props.icon} />
+                            <div className="banner-icon">
+
+                            </div>
                         </div>
                         <span className="col-6">
                             <h1 className="city">{city}</h1> </span>
@@ -58,6 +64,8 @@ export default function Banner(props) {
                             </div>
                             <div className="col-6 right-col">
                                 <br />
+                                <div className="min-max"> DAILY TEMP:
+                                    {Math.round(weatherData.min)}-{Math.round(weatherData.max)}°</div>
                                 <div className="weather-conditions">
                                     HUMIDITY:
                                     <span className="humidity">{weatherData.humidity}</span>%
@@ -65,10 +73,9 @@ export default function Banner(props) {
                                     WIND:
                                     <span className="wind">{weatherData.wind}</span>km/h
                                     <br />
-                                    RAIN:
-                                    <span className="rain">{weatherData.rain}</span>%
                                 </div>
                             </div>
+                            <hr />
                         </div>
                     </div>
                     <Forecast coordinates={weatherData.coordinates} />

@@ -1,6 +1,15 @@
 import React from "react";
 
 export default function ForecastDay(props) {
+
+    function humidity() {
+        let humidity = props.data.wind.speed;
+        return '${humidity}'
+    }
+    function wind() {
+        let wind = props.data.main.humidity;
+        return '${wind}'
+    }
     function maxTemperature() {
         let temperature = Math.round(props.data.temp.max);
         return `${temperature}`;
@@ -19,11 +28,17 @@ export default function ForecastDay(props) {
     }
 
     return (
-        <div className="col weekday">{day()}
-            <div className="upcoming-icon"></div>
+        <div className="col weekday"><strong>{day()}</strong>
             <div className="temp-max-min">
-                {Math.round(maxTemperature())}° / {Math.round(minTemperature())}°</div>
-
+                {Math.round(maxTemperature())}/{Math.round(minTemperature())}°</div>
+            <div className="weather-conditions">
+                H:
+                <span className="humidity">{humidity}</span>%
+                <br />
+                W:
+                <span className="wind">{wind}</span>km/h
+                <br />
+            </div>
         </div>
 
     )
