@@ -20,9 +20,6 @@ export default function Forecast(props) {
                 <div className="forecast">
                     <div className="row">
                         <div className="col">
-                            <ForecastDay data={forecastData[0]} />
-                        </div>
-                        <div className="col">
                             <ForecastDay data={forecastData[1]} />
                         </div>
                         <div className="col">
@@ -31,10 +28,16 @@ export default function Forecast(props) {
                         <div className="col">
                             <ForecastDay data={forecastData[3]} />
                         </div>
+                        <hr />
                         <div className="col">
                             <ForecastDay data={forecastData[4]} />
                         </div>
-
+                        <div className="col">
+                            <ForecastDay data={forecastData[5]} />
+                        </div>
+                        <div className="col">
+                            <ForecastDay data={forecastData[6]} />
+                        </div>
                     </div>
                 </div>
             </div>

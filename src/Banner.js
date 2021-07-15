@@ -52,17 +52,17 @@ export default function Banner(props) {
 
                             </div>
                         </div>
-                        <span className="col-6">
-                            <h1 className="city">{city}</h1> </span>
+                        <span className="text-center">
+                            <h1 className="city ">{city}</h1> </span>
                     </div>
                     <div className="banner-main">
                         <div className="row">
-                            <div className="col-6 left-col">
+                            <div className="col-5 left-col">
                                 <div className="temperature">
                                     <Units celcius={weatherData.temperature} /></div>
                                 <div className="description">{weatherData.description}</div>
                             </div>
-                            <div className="col-6 right-col">
+                            <div className="col-7 right-col">
                                 <br />
                                 <div className="min-max"> DAILY TEMP:
                                     {Math.round(weatherData.min)}-{Math.round(weatherData.max)}°</div>
