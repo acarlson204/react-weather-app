@@ -22,6 +22,7 @@ export default function ForecastDay(props) {
         <div className="col weekday"><strong>{day()}</strong>
             <div className="temp-max-min">
                 {Math.round(maxTemperature())}/{Math.round(minTemperature())}°</div>
+            <img src={weatherData.img} alt={""} />
         </div>
 
     )
