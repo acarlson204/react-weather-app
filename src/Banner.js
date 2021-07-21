@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App";
+import "./App.css";
 import "./Banner.css";
 import Forecast from "./Forecast";
 import axios from "axios";
@@ -20,7 +20,8 @@ export default function Banner(props) {
             humidity: response.data.main.humidity,
             wind: Math.round(response.data.wind.speed),
             max: Math.round(response.data.main.temp_max),
-            min: Math.round(response.data.main.temp_min)
+            min: Math.round(response.data.main.temp_min),
+            img: "https://openweathermap.org/img/wn/10d@2x.png"
         })
     }
 
@@ -47,13 +48,8 @@ export default function Banner(props) {
                 </form>
                 <div className="Banner">
                     <div className="row">
-                        <div className="col-3">
-                            <div className="banner-icon">
-
-                            </div>
-                        </div>
                         <span className="text-center">
-                            <h1 className="city ">{city}</h1> </span>
+                            <h1 className="city"><img src={weatherData.img} alt={""} />{city}</h1> </span>
                     </div>
                     <div className="banner-main">
                         <div className="row">

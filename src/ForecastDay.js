@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./App.css";
 export default function ForecastDay(props) {
 
     function maxTemperature() {
@@ -18,7 +18,6 @@ export default function ForecastDay(props) {
         let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
         return days[day];
     }
-    console.log(props);
     return (
         <div className="col weekday"><strong>{day()}</strong>
             <div className="temp-max-min">
