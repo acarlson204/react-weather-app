@@ -28,7 +28,6 @@ export default function Forecast(props) {
                         <div className="col">
                             <ForecastDay data={forecastData[3]} />
                         </div>
-
                         <hr />
                         <div className="col">
                             <ForecastDay data={forecastData[4]} />

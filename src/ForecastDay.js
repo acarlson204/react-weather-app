@@ -12,6 +12,11 @@ export default function ForecastDay(props) {
         return `${temperature}`;
     }
 
+    function img() {
+        let img = props.img;
+        return `${img}`;
+    }
+
     function day() {
         let date = new Date(props.data.dt * 1000)
         let day = date.getDay();
@@ -20,9 +25,12 @@ export default function ForecastDay(props) {
     }
     return (
         <div className="col weekday"><strong>{day()}</strong>
+            <div className="img">
+                <img src={img} alt={""} />
+            </div>
             <div className="temp-max-min">
                 {Math.round(maxTemperature())}/{Math.round(minTemperature())}°</div>
-            <img src={weatherData.img} alt={""} />
+            <br />
         </div>
 
     )
