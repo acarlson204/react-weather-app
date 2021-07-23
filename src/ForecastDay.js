@@ -12,10 +12,7 @@ export default function ForecastDay(props) {
         return `${temperature}`;
     }
 
-    function img() {
-        let img = props.img;
-        return `${img}`;
-    }
+
 
     function day() {
         let date = new Date(props.data.dt * 1000)
@@ -26,7 +23,7 @@ export default function ForecastDay(props) {
     return (
         <div className="col weekday"><strong>{day()}</strong>
             <div className="img">
-                <img src={img} alt={""} />
+                <img src={`https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`} alt={""} />
             </div>
             <div className="temp-max-min">
                 {Math.round(maxTemperature())}/{Math.round(minTemperature())}°</div>

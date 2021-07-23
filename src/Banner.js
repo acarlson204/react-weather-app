@@ -21,9 +21,11 @@ export default function Banner(props) {
             wind: Math.round(response.data.wind.speed),
             max: Math.round(response.data.main.temp_max),
             min: Math.round(response.data.main.temp_min),
-            img: "https://openweathermap.org/img/wn/10d@2x.png"
+            icon: response.data.weather[0].icon,
+            img: `https://openweathermap.org/img/wn/{icon}@2x.png`
         })
     }
+
 
     function handleSubmit(event) {
         event.preventDefault();
